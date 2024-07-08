@@ -18,6 +18,7 @@ public class MatematicOperations {
 		
 		//función para hallar la raíz cuadrada de un número
 		System.out.println(Math.sqrt(y));
+		System.out.println((int)Math.sqrt(y)); //Casting
 		
 		//Área de un círculo: pi*r^2
 		System.out.println(Math.PI*Math.pow(y, 2));
