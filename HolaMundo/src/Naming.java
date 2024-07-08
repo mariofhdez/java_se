@@ -1,4 +1,4 @@
-
+			////Upper Camel Case
 public class Naming {
 	
 	public static void main(String[] args) {
@@ -21,6 +21,10 @@ public class Naming {
 		int POSITION = -5;
 		int MAX_WIDTH = 9999;
 		int MIN_WIDTH = 1;
+		
+		//Lower Camel Case
+		String fullName = "Mario Florez";
+		int sizeInCentimeters = 26;
 	}
 
 }
