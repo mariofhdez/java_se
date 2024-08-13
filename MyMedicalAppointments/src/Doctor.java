@@ -13,7 +13,10 @@ public class Doctor {
 		id++;
 	}
 	
-	Doctor(String name){
+	Doctor(String name, String speciallity){
+		id++;
+		this.name = name;
+		this.speciallity = speciallity;
 		System.out.println("El nombre del doctor asignado es: "+name);
 	}
 	
