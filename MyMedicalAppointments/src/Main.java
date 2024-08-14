@@ -11,14 +11,11 @@ public class Main {
 		System.out.println(myDoctor.speciallity);
 		
 		Patient patient = new Patient("Alejandra", "alejandra@email.com");
-		System.out.println(patient.name);
-		System.out.println(patient.email);
+		patient.setWeight(54.6);
+		System.out.println(patient.getWeight());
 		
-		patient.weight = 60.5; //kg
-		patient.height = 1.65; //mt
-		
-		System.out.println(patient.weight);
-		System.out.println(patient.height);
+		patient.setPhoneNumber("123454678");
+		System.out.println(patient.getPhoneNumber());
 	}
 
 }
