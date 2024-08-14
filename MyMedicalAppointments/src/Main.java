@@ -10,14 +10,15 @@ public class Main {
 		
 		Doctor myDoctor = new Doctor("Anahí Salgado", "Pediatría");
 		
-//		myDoctor.addAvailableAppointment(new Date(), "4pm");
-//		myDoctor.addAvailableAppointment(new Date(), "10am");
-//		myDoctor.addAvailableAppointment(new Date(), "1pm");
+		myDoctor.addAvailableAppointment(new Date(), "4pm");
+		myDoctor.addAvailableAppointment(new Date(), "10am");
+		myDoctor.addAvailableAppointment(new Date(), "1pm");
 		
-		for(Doctor.AvailableAppointment avaApp: myDoctor.getAvailableAppointments()) {
-			System.out.println(avaApp.getDate() + "  "+ avaApp.getTime());
-		}
+//		for(Doctor.AvailableAppointment avaApp: myDoctor.getAvailableAppointments()) {
+//			System.out.println(avaApp.getDate() + "  "+ avaApp.getTime());
+//		}
 		
+		System.out.println(myDoctor.toString());
 		
 		System.out.println("\n");
 		
