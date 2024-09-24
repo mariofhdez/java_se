@@ -4,6 +4,7 @@ import java.util.Date;
 
 import model.Doctor;
 import model.Patient;
+import model.User;
 
 public class Main {
 
@@ -21,23 +22,30 @@ public class Main {
 //			System.out.println(avaApp.getDate() + "  "+ avaApp.getTime());
 //		}
 		
-		System.out.println(myDoctor.toString());
+		User user = new Doctor("Mario","correo@correo.com");
+		user.showDataUser();
 		
-		System.out.println("\n");
+		User userPa = new Patient("Stefania", "sc@correo.com");
+		System.out.println("Nombre del paciente "+userPa.getName());
+		userPa.showDataUser();
 		
-		Patient patient = new Patient("Alejandra", "alejandra@email.com");
-		Patient patient2 = new Patient("Andrea", "andrea@email.com");
-		
-		System.out.println(patient.getName());
-		System.out.println(patient2.getName());
-		
-		patient.setWeight(54.6);
-		System.out.println(patient.getWeight());
-		
-		patient.setPhoneNumber("123454678");
-		System.out.println(patient.getPhoneNumber());
-		
-		System.out.println(patient.toString());
+//		System.out.println(myDoctor.toString());
+//		
+//		System.out.println("\n");
+//		
+//		Patient patient = new Patient("Alejandra", "alejandra@email.com");
+//		Patient patient2 = new Patient("Andrea", "andrea@email.com");
+//		
+//		System.out.println(patient.getName());
+//		System.out.println(patient2.getName());
+//		
+//		patient.setWeight(54.6);
+//		System.out.println(patient.getWeight());
+//		
+//		patient.setPhoneNumber("123454678");
+//		System.out.println(patient.getPhoneNumber());
+//		
+//		System.out.println(patient.toString());
 		
 	}
 

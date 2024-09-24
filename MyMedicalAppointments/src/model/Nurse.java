@@ -16,4 +16,10 @@ public class Nurse extends User {
 		this.speciallity = speciallity;
 	}
 
+	@Override
+	public void showDataUser() {
+		System.out.println("Hospital: Sagrada Familia");
+		System.out.println("Departamento: Pediatría, Psicología");
+	}
+
 }

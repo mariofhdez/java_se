@@ -75,4 +75,10 @@ public class Doctor extends User {
 		}
 
 	}
+
+	@Override
+	public void showDataUser() {
+		System.out.println("Hospital: San Juan de Dios");
+		System.out.println("Departamento: Cancerología");
+	}
 }
