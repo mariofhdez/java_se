@@ -80,7 +80,7 @@ public class UIMenu {
 					if(p.getEmail().equals(email)) {
 						emailVerify = true;
 						patientLogged = p;
-						//showPatientMenu
+						UIPatientMenu.showPatientMenu();
 					}
 				}
 			}
