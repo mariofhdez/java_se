@@ -70,7 +70,7 @@ public class UIMenu {
 						emailVerify = true;
 						//Obtener el usuario logueado
 						doctorLogged = d;
-						//showDoctorMenu
+						UIDoctorMenu.showDoctorMenu();
 					}
 				}
 			}
