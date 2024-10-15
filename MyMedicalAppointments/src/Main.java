@@ -2,7 +2,9 @@ import static ui.UIMenu.*;
 
 import java.util.Date;
 
+import model.AppointmentDoctor;
 import model.Doctor;
+import model.ISchedulable;
 import model.Patient;
 import model.User;
 
@@ -28,6 +30,30 @@ public class Main {
 		User userPa = new Patient("Stefania", "sc@correo.com");
 		System.out.println("Nombre del paciente "+userPa.getName());
 		userPa.showDataUser();
+		
+		User user1 = new User("Marito", "mario@correo.com") {
+			
+			@Override
+			public void showDataUser() {
+				System.out.println("Doctor\n");
+				System.out.println("Hospital: Cruz Verde");
+				System.out.println("Departamento: Geriatría");
+			}
+		};
+		
+		user1.showDataUser();
+		
+		ISchedulable iSchedulable = new ISchedulable() {
+			
+			@Override
+			public void schedule(Date date, String time) {
+				// TODO Auto-generated method stub
+				
+			}
+		};
+		
+		ISchedulable iSchedulable1 = new AppointmentDoctor();
+		iSchedulable1.schedule();
 		
 //		System.out.println(myDoctor.toString());
 //		
