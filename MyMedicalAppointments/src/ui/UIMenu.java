@@ -1,5 +1,9 @@
 package ui;
+import java.util.ArrayList;
 import java.util.Scanner;
+
+import model.Doctor;
+import model.Patient;
 
 public class UIMenu {
 	
@@ -8,6 +12,9 @@ public class UIMenu {
 			"Mayo", "Junio", "Julio", "Agosto",
 			"Septiembre", "Octubre", "Noviembre", "Diciembre"
 	};
+	public static Doctor doctorLogged;
+	public static Patient patientLogged;
+	
 	public static void showMenu() {
 		System.out.println("Welcome to My Appointments");
 		System.out.println("Selecciona la opción deseada");
@@ -24,10 +31,12 @@ public class UIMenu {
 			switch (response) {
 			case 1:
 				System.out.println("Doctor");
+				authUser(1);
+				response = 0;
 				break;
 			case 2:
 				response = 0;
-				showPatientMenu();
+				authUser(2);
 				break;
 			case 0:
 				System.out.println("Thank you for your visit");
@@ -36,6 +45,47 @@ public class UIMenu {
 				System.out.println("Please select a correct answer");
 			}
 		} while (response != 0);
+	}
+	
+	private static void authUser (int userType) {
+		ArrayList<Doctor> doctors = new ArrayList<>();
+		doctors.add(new Doctor("Alejandro Martinez", "alejo@correo.com"));
+		doctors.add(new Doctor("Karen Sosa", "karen@correo.com"));
+		doctors.add(new Doctor("Rocío Gómez", "rocio@correo.com"));
+		
+		ArrayList<Patient> patients = new ArrayList<>();
+		patients.add(new Patient("Mario Florez", "mario@correo.com"));
+		patients.add(new Patient("Roberto Rodríguez", "roberto@correo.com"));
+		patients.add(new Patient("Carlos Sanchez", "carlos@correo.com"));
+		
+		boolean emailVerify = false;
+		
+		do {
+			System.out.println("Insert your email: [a@a.com]");
+			Scanner sc = new Scanner(System.in);
+			String email = sc.nextLine();
+			if(userType == 1) {
+				for(Doctor d: doctors) {
+					if(d.getEmail().equals(email)) {
+						emailVerify = true;
+						//Obtener el usuario logueado
+						doctorLogged = d;
+						//showDoctorMenu
+					}
+				}
+			}
+			
+			if(userType == 2) {
+				for(Patient p:patients) {
+					if(p.getEmail().equals(email)) {
+						emailVerify = true;
+						patientLogged = p;
+						//showPatientMenu
+					}
+				}
+			}
+		} while (!emailVerify);
+		
 	}
 
 	public static void showPatientMenu() {
